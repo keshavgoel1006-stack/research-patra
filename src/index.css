@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjusted for navbar height */
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  /* CHANGED: Using pure white background */
+  background-color: #FFFFFF; 
+  /* CHANGED: Using the new deep navy for text */
+  color: #0F172A; 
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar - Matching the new pure white theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  /* CHANGED to white */
+  background: #FFFFFF;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 5px;
+  border: 2px solid #FFFFFF; /* Adds a white border around thumb for clean look */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
