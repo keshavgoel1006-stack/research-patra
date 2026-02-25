@@ -1,31 +1,37 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Layout Components
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import LogoSlider from './components/LogoSlider';
-import Process from './components/Process';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop'; // <-- 1. Imported here
+
+// Pages
+import Home from './pages/Home';
+import ServicesPage from './pages/ServicesPage';
+import About from './pages/About'; 
 
 function App() {
   return (
-    <div className="min-h-screen bg-white font-sans selection:bg-primaryGreen selection:text-white">
-      <Navbar />
+    <Router>
+      {/* 2. Placed here. It watches every route change! */}
+      <ScrollToTop /> 
       
-      <main>
-        <Hero />
-        <Services />
-        <Testimonials />
+      <div className="min-h-screen bg-white font-sans text-[#0F172A] flex flex-col">
+        <Navbar />
         
-        {/* These components will look dark until we update them */}
-        <LogoSlider />
-        <Process />
-        <Contact />
-      </main>
+        {/* Main Content Area */}
+        <main className="flex-grow pt-20"> 
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

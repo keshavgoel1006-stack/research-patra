@@ -1,81 +1,93 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { FileSearch, PenTool, CheckCircle, UploadCloud } from 'lucide-react';
+import { Search, PenTool, FileSearch, Award } from 'lucide-react';
 
 const steps = [
   {
-    id: "01",
-    title: "Topic Consultation",
-    desc: "We help you select a novel, researchable topic approved by your university.",
-    icon: <FileSearch size={24} />,
-    color: "text-blue-400",
-    bg: "bg-blue-500/10 border-blue-500/20"
+    num: "01",
+    title: "Discovery & Gap Analysis",
+    desc: "We dive deep into your field to find a unique, high-impact research gap that guarantees originality.",
+    icon: <Search className="text-[#10B981]" size={28} />
   },
   {
-    id: "02",
-    title: "Drafting & Analysis",
-    desc: "Our experts draft the paper and perform statistical analysis (SPSS/R/Python).",
-    icon: <PenTool size={24} />,
-    color: "text-purple-400",
-    bg: "bg-purple-500/10 border-purple-500/20"
+    num: "02",
+    title: "Drafting & Structuring",
+    desc: "Our PhD experts help structure your methodology and draft the chapters with academic rigor.",
+    icon: <PenTool className="text-[#10B981]" size={28} />
   },
   {
-    id: "03",
-    title: "Review & Editing",
-    desc: "Rigorous proofreading to remove plagiarism and grammatical errors.",
-    icon: <CheckCircle size={24} />,
-    color: "text-teal-400",
-    bg: "bg-teal-500/10 border-teal-500/20"
+    num: "03",
+    title: "Review & Refinement",
+    desc: "Rigorous plagiarism checks, peer-review simulation, and grammatical perfection.",
+    icon: <FileSearch className="text-[#10B981]" size={28} />
   },
   {
-    id: "04",
-    title: "Publication Support",
-    desc: "We submit your paper to high-impact journals (Scopus/IEEE) and handle revisions.",
-    icon: <UploadCloud size={24} />,
-    color: "text-cyan-400",
-    bg: "bg-cyan-500/10 border-cyan-500/20"
+    num: "04",
+    title: "Journal Submission",
+    desc: "Targeting high-impact Scopus & IEEE journals and handling the tricky reviewer revisions.",
+    icon: <Award className="text-[#10B981]" size={28} />
   }
 ];
 
 const Process = () => {
   return (
-    <section id="process" className="py-24 bg-bgDark relative">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="process" className="py-24 relative bg-white overflow-hidden z-10 border-t border-gray-100">
+      
+      {/* 1. TEXTURE: The Tech Dot-Grid Background */}
+      <div 
+        className="absolute inset-0 opacity-[0.4] pointer-events-none" 
+        style={{ 
+          backgroundImage: 'radial-gradient(#CBD5E1 1.5px, transparent 1.5px)', 
+          backgroundSize: '30px 30px' 
+        }}
+      ></div>
+
+      {/* Subtle Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-50/50 rounded-full blur-[120px] -z-10"></div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="text-secondary font-semibold tracking-wider uppercase text-sm">Workflow</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">How We Work</h2>
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] mb-6 tracking-tight">
+            How We Achieve <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B981] to-[#059669]">Excellence</span>
+          </h2>
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto font-medium">
+            A proven, four-step methodology designed to take you from a blank page to a published scholar with zero stress.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8 relative">
-          
-          {/* Connecting Line (Desktop Only) */}
-          <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-blue-900 via-purple-900 to-teal-900 -z-10"></div>
-
+        {/* The Staggered Interactive Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <motion.div 
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2 }}
-              className="relative group"
+            <div 
+              key={index} 
+              // The "Stagger" effect: pushes the even cards down slightly to break the boring straight line
+              className={`relative group bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(16,185,129,0.1)] hover:-translate-y-2 transition-all duration-500 ${index % 2 !== 0 ? 'lg:mt-12' : ''}`}
             >
-              {/* Step Number Bubble */}
-              <div className={`w-24 h-24 mx-auto ${step.bg} border backdrop-blur-xl rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-black/50`}>
-                <span className={`text-2xl font-bold ${step.color}`}>{step.id}</span>
+              
+              {/* Massive faded background number for depth */}
+              <div className="absolute top-4 right-6 text-7xl font-extrabold text-gray-50 group-hover:text-emerald-50 transition-colors duration-500 pointer-events-none select-none">
+                {step.num}
               </div>
 
-              {/* Text Content */}
-              <div className="text-center">
-                <h3 className="text-xl font-bold text-white mb-3 flex items-center justify-center gap-2">
-                  {step.title}
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {step.desc}
-                </p>
+              {/* Icon floating in a glassy circle */}
+              <div className="w-16 h-16 rounded-2xl bg-emerald-50 flex items-center justify-center mb-8 group-hover:bg-[#10B981] group-hover:scale-110 transition-all duration-500 relative z-10">
+                {/* We clone the icon to change its color on hover without breaking the component */}
+                {React.cloneElement(step.icon, { 
+                  className: "text-[#10B981] group-hover:text-white transition-colors duration-500" 
+                })}
               </div>
-            </motion.div>
+              
+              <h3 className="text-xl font-bold text-[#0F172A] mb-4 relative z-10 group-hover:text-[#10B981] transition-colors">
+                {step.title}
+              </h3>
+              
+              <p className="text-gray-500 leading-relaxed font-medium relative z-10">
+                {step.desc}
+              </p>
+
+              {/* A tiny green accent line that expands on hover */}
+              <div className="absolute bottom-0 left-8 right-8 h-1 bg-[#10B981] rounded-t-full opacity-0 group-hover:opacity-100 transform scale-x-0 group-hover:scale-x-100 transition-all duration-500"></div>
+            </div>
           ))}
         </div>
 

@@ -9,7 +9,7 @@ const testimonials = [
   },
   {
     quote: "These many person development textmonial assistance with writing entire externation and benefit, impressive range for main conseniment.",
-    name: "Dr. Amit Sharma", // Kept same as image for accuracy
+    name: "Dr. Amit Sharma",
     title: "PhD Candidate"
   },
   {
@@ -21,25 +21,27 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-24 bg-darkNavy relative">
+    <section id="testimonials" className="py-24 bg-[#0F172A] relative">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">Testimonials</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Testimonials</h2>
         </div>
 
         <div className="flex items-center justify-between gap-6 relative">
           
-          {/* Left Arrow */}
-          <button className="hidden md:flex w-10 h-10 bg-white rounded-full items-center justify-center text-darkNavy hover:bg-gray-200 transition-colors absolute -left-5 z-10 shadow-lg">
+          <button className="hidden md:flex w-10 h-10 bg-white rounded-full items-center justify-center text-[#0F172A] hover:bg-gray-200 transition-colors absolute -left-5 z-10 shadow-lg hover:scale-110">
             <ChevronLeft size={24} />
           </button>
 
-          {/* Cards */}
           <div className="grid md:grid-cols-3 gap-6 w-full">
             {testimonials.map((test, index) => (
-              <div key={index} className="bg-slate-800/80 p-8 rounded-2xl border border-slate-700 relative">
-                <Quote size={40} className="text-primaryGreen mb-4 opacity-80" />
+              <div 
+                key={index} 
+                // THE MAGIC IS HERE: transform hover:-translate-y-2 hover:shadow-2xl
+                className="bg-slate-800/80 p-8 rounded-2xl border border-slate-700 relative transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50 cursor-pointer group"
+              >
+                <Quote size={40} className="text-[#10B981] mb-4 opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
                 <p className="text-gray-300 text-sm leading-relaxed mb-8 min-h-[100px]">
                   "{test.quote}"
                 </p>
@@ -51,19 +53,17 @@ const Testimonials = () => {
             ))}
           </div>
 
-          {/* Right Arrow */}
-          <button className="hidden md:flex w-10 h-10 bg-white rounded-full items-center justify-center text-darkNavy hover:bg-gray-200 transition-colors absolute -right-5 z-10 shadow-lg">
+          <button className="hidden md:flex w-10 h-10 bg-white rounded-full items-center justify-center text-[#0F172A] hover:bg-gray-200 transition-colors absolute -right-5 z-10 shadow-lg hover:scale-110">
             <ChevronRight size={24} />
           </button>
 
         </div>
         
-        {/* Dots */}
         <div className="flex justify-center gap-2 mt-10">
-          <div className="w-2.5 h-2.5 rounded-full bg-primaryGreen"></div>
-          <div className="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
-          <div className="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
-          <div className="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-[#10B981]"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-slate-600 cursor-pointer hover:bg-slate-400 transition-colors"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-slate-600 cursor-pointer hover:bg-slate-400 transition-colors"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-slate-600 cursor-pointer hover:bg-slate-400 transition-colors"></div>
         </div>
 
       </div>
