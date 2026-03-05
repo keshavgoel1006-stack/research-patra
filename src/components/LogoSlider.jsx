@@ -50,7 +50,7 @@ const LogoSlider = () => {
         </h2>
         {/* Formal Emerald Accent Line */}
         <div className="w-20 h-1.5 bg-[#10B981] mx-auto mt-6 rounded-full shadow-sm"></div>
-      </div>
+      </div>s
 
       {/* The Slider Container */}
       <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
@@ -66,7 +66,7 @@ const LogoSlider = () => {
           {[...logos, ...logos, ...logos, ...logos, ...logos, ...logos].map((logo, index) => (
             <div 
               key={index} 
-              className="flex-shrink-0 w-64 mx-4 bg-white border border-gray-100 h-28 flex items-center justify-center rounded-2xl shadow-[0_4px_15px_rgb(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              className="flex-shrink-0 w-64 mx-4 bg-white border border-gray-100 h-28 flex items-center justify-center rounded-2xl shadow-[0_4px_15px_rgb(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 cursor-pointer mobile-fast-scroll"
             >
               {logo.component}
             </div>
