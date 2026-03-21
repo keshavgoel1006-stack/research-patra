@@ -5,29 +5,29 @@ const steps = [
   {
     icon: <FileSearch className="text-[#F97316]" size={32} />, // Discovery icon
     number: "01",
-    title: "Discovery & Gap Analysis",
-    text: "Comprehensive consultation, Literature overview, Research questions, Methodology.",
-    points: ["Background Research", "Gap Identification"]
+    title: "Affordable Prices",
+    text: "High-quality academic writing and research support at student-friendly, transparent rates.",
+    points: ["Satisfactory Pricing", "Quality Assured"]
   },
   {
     icon: <PenTool className="text-[#F97316]" size={32} />, // Drafting icon
     number: "02",
-    title: "Drafting & Structuring",
-    text: "Introduction & Background, Literature Review chapter, Research Design, Data Analysis.",
+    title: "Expert Team",
+    text: "Experienced academic writers and researchers dedicated to crafting exceptional dissertations, theses, and research papers.",
     points: ["Logical Flow", "Structure Check"]
   },
   {
     icon: <BrainCircuit className="text-[#F97316]" size={32} />, // Review icon
     number: "03",
-    title: "Review & Refinement",
-    text: "Quality assessment, Grammar and spelling, Formatting, Plagiarism check.",
+    title: "Proven Academic Practices",
+    text: "Ethical solutions that enhance learning and protect academic credibility",
     points: ["Depth Review", "Clarity Check"]
   },
   {
     icon: <Mic className="text-[#F97316]" size={32} />, // Submission icon
     number: "04",
-    title: "Submission & Defense Support",
-    text: "Final changes, Abstract writing, Slide deck creation, Defense prep.",
+    title: "Customer Focus",
+    text: "Prioritizing student & researchers success with personalized academic support and one-to-one guidance.",
     points: ["Final Check", "Confidence Boost"]
   }
 ];
