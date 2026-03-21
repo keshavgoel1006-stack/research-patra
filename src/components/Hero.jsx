@@ -6,8 +6,8 @@ const Hero = () => {
     <section id="home" className="relative pt-32 pb-24 overflow-hidden bg-white">
       
       {/* Background Glows */}
-      <div className="absolute -top-32 -left-32 w-[700px] h-[700px] bg-[#059669] rounded-full blur-[140px] opacity-30 pointer-events-none"></div>
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#10B981] rounded-full blur-[150px] opacity-25 translate-x-1/4 pointer-events-none"></div>
+      <div className="absolute -top-32 -left-32 w-[700px] h-[700px] bg-[#EA580C] rounded-full blur-[140px] opacity-30 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#F97316] rounded-full blur-[150px] opacity-25 translate-x-1/4 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10 min-h-[70vh]">
         
@@ -15,7 +15,7 @@ const Hero = () => {
         <div>
           <h1 className="text-5xl md:text-6xl font-extrabold text-[#0F172A] leading-[1.15] mb-6 tracking-tight">
             Expert Guidance for <br />
-            <span className="text-[#10B981]">Academic Excellence</span>
+            <span className="text-[#F97316]">Academic Excellence</span>
           </h1>
           
           <p className="text-lg text-gray-500 mb-10 max-w-lg leading-relaxed font-medium">
@@ -23,7 +23,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap items-center gap-4 mb-10">
-            <button className="px-8 py-3.5 bg-[#10B981] text-white rounded-full font-semibold shadow-[0_8px_20px_rgb(16,185,129,0.35)] hover:bg-[#059669] transition-all hover:-translate-y-0.5">
+            <button className="px-8 py-3.5 bg-[#F97316] text-white rounded-full font-semibold shadow-[0_8px_20px_rgb(249,115,22,0.35)] hover:bg-[#EA580C] transition-all hover:-translate-y-0.5">
               Start Your Project
             </button>
             <button className="px-8 py-3.5 bg-white border border-gray-200 text-gray-700 rounded-full font-semibold shadow-sm hover:border-gray-300 hover:bg-gray-50 transition-all">
@@ -32,8 +32,8 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center gap-6 text-sm font-semibold text-gray-500">
-            <span className="flex items-center gap-2"><CheckCircle2 size={18} className="text-[#10B981]" /> 100% Confidential</span>
-            <span className="flex items-center gap-2"><CheckCircle2 size={18} className="text-[#10B981]" /> PhD Experts</span>
+            <span className="flex items-center gap-2"><CheckCircle2 size={18} className="text-[#F97316]" /> 100% Confidential</span>
+            <span className="flex items-center gap-2"><CheckCircle2 size={18} className="text-[#F97316]" /> PhD Experts</span>
           </div>
         </div>
 
@@ -70,7 +70,7 @@ const Hero = () => {
              <p className="text-sm font-bold text-gray-800 mb-6 w-full text-center tracking-wide">Scientific Abstract</p>
              
              <div className="w-24 h-24 bg-slate-50 rounded-2xl flex items-center justify-center mb-6 border border-gray-50">
-               <Hexagon size={48} className="text-[#10B981] opacity-60" strokeWidth={2} />
+               <Hexagon size={48} className="text-[#F97316] opacity-60" strokeWidth={2} />
              </div>
              
              <p className="text-sm font-bold text-gray-800 mb-4 w-full text-left tracking-wide">Scientific Abstract</p>

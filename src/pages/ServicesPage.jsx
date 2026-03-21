@@ -36,18 +36,18 @@ const fullServices = [
 
 const ServicesPage = () => {
   return (
-    <div className="bg-white min-h-screen pt-20 font-sans selection:bg-[#10B981] selection:text-white">
+    <div className="bg-white min-h-screen pt-20 font-sans selection:bg-[#F97316] selection:text-white">
 
-      {/* HEADER: Matches Home Page Hero (White BG + Emerald Glows) */}
+      {/* HEADER: Matches Home Page Hero (White BG + orange Glows) */}
       <section className="relative py-20 overflow-hidden">
         {/* Glow Blobs */}
-        <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#059669] rounded-full blur-[140px] opacity-20 pointer-events-none"></div>
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#10B981] rounded-full blur-[150px] opacity-15 translate-x-1/4 pointer-events-none"></div>
+        <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#EA580C] rounded-full blur-[140px] opacity-20 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#F97316] rounded-full blur-[150px] opacity-15 translate-x-1/4 pointer-events-none"></div>
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-extrabold text-[#0F172A] mb-6 tracking-tight leading-tight">
             Comprehensive <br />
-            <span className="text-[#10B981]">Academic Services</span>
+            <span className="text-[#F97316]">Academic Services</span>
           </h1>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto font-medium leading-relaxed">
             From dissertation planning to detailed data analysis, we deliver academic solutions tailored to your unique requirements with ethical guidance.
@@ -68,14 +68,14 @@ const ServicesPage = () => {
                 // Exactly matching the home page hover states (black border, lift up, deep shadow)
                 className="bg-white p-10 rounded-[2rem] border border-gray-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-black hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full cursor-pointer group"
               >
-                <div className="w-16 h-16 rounded-2xl bg-[#10B981] flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-[#F97316] flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-[#0F172A] mb-4">{service.title}</h3>
                 <p className="text-gray-500 leading-relaxed font-medium flex-grow">
                   {service.desc}
                 </p>
-                <div className="mt-8 flex items-center gap-2 text-[#10B981] font-bold group-hover:text-[#059669] transition-colors">
+                <div className="mt-8 flex items-center gap-2 text-[#F97316] font-bold group-hover:text-[#EA580C] transition-colors">
                   Learn more <ArrowRight size={20} className="transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -90,15 +90,15 @@ const ServicesPage = () => {
           
           {/* Typographic Stat Block instead of a generic Stock Image */}
           <div className="relative p-12 bg-white rounded-[3rem] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] text-center transform hover:scale-105 transition-transform duration-500">
-             <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#10B981] rounded-full blur-[60px] opacity-20 pointer-events-none"></div>
-             <h3 className="text-8xl font-black text-[#0F172A] mb-2 tracking-tighter">10<span className="text-[#10B981]">+</span></h3>
+             <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#F97316] rounded-full blur-[60px] opacity-20 pointer-events-none"></div>
+             <h3 className="text-8xl font-black text-[#0F172A] mb-2 tracking-tighter">10<span className="text-[#F97316]">+</span></h3>
              <p className="text-xl font-bold text-gray-500 uppercase tracking-widest">Years of Trust</p>
-             <div className="w-20 h-1.5 bg-[#10B981] mx-auto mt-8 rounded-full"></div>
+             <div className="w-20 h-1.5 bg-[#F97316] mx-auto mt-8 rounded-full"></div>
              <p className="mt-8 text-gray-500 font-medium">Delivering academic excellence across undergraduate, postgraduate, and doctoral programs.</p>
           </div>
 
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-[#059669] font-bold rounded-full text-sm mb-6 border border-emerald-100">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 text-[#EA580C] font-bold rounded-full text-sm mb-6 border border-orange-100">
               <CheckCircle2 size={16} /> OUR LEGACY
             </div>
             <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] mb-6 leading-tight tracking-tight">
@@ -109,15 +109,15 @@ const ServicesPage = () => {
             </p>
             <ul className="space-y-5">
               <li className="flex items-center gap-4 text-[#0F172A] font-bold text-lg">
-                <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-[#10B981]"><CheckCircle2 size={20} /></div>
+                <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-[#F97316]"><CheckCircle2 size={20} /></div>
                 Superior Quality
               </li>
               <li className="flex items-center gap-4 text-[#0F172A] font-bold text-lg">
-                <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-[#10B981]"><CheckCircle2 size={20} /></div>
+                <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-[#F97316]"><CheckCircle2 size={20} /></div>
                 Transparent Practices
               </li>
               <li className="flex items-center gap-4 text-[#0F172A] font-bold text-lg">
-                <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-[#10B981]"><CheckCircle2 size={20} /></div>
+                <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-[#F97316]"><CheckCircle2 size={20} /></div>
                 Personalized Solutions
               </li>
             </ul>
@@ -128,7 +128,7 @@ const ServicesPage = () => {
       {/* CTA BANNER: Deep Navy with glowing background, NO stock images */}
       <section className="relative py-24 bg-[#0F172A] overflow-hidden text-center">
         {/* Internal Glow Effects */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#10B981] rounded-full blur-[150px] opacity-20 pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#F97316] rounded-full blur-[150px] opacity-20 pointer-events-none"></div>
         
         <div className="relative z-10 max-w-3xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
@@ -137,7 +137,7 @@ const ServicesPage = () => {
           <p className="text-gray-400 text-lg mb-10 font-medium">
             Contact us today to discuss your project, get a free quote, or learn more about how we can support your research journey.
           </p>
-          <button className="px-10 py-4 bg-[#10B981] text-white rounded-full font-bold text-lg shadow-[0_8px_20px_rgb(16,185,129,0.35)] hover:bg-[#059669] hover:-translate-y-1 transition-all">
+          <button className="px-10 py-4 bg-[#F97316] text-white rounded-full font-bold text-lg shadow-[0_8px_20px_rgb(249,115,22,0.35)] hover:bg-[#EA580C] hover:-translate-y-1 transition-all">
             Get A Free Quote
           </button>
         </div>

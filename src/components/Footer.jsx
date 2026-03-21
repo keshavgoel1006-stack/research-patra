@@ -38,7 +38,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-primaryGreen" /> 
-              +91 98765 43210
+              +91 78272 95033
             </li>
             <li className="flex items-center gap-3">
               <MapPin size={18} className="text-primaryGreen" /> 

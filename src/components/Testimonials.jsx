@@ -41,7 +41,7 @@ const Testimonials = () => {
                 // THE MAGIC IS HERE: transform hover:-translate-y-2 hover:shadow-2xl
                 className="bg-slate-800/80 p-8 rounded-2xl border border-slate-700 relative transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50 cursor-pointer group"
               >
-                <Quote size={40} className="text-[#10B981] mb-4 opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+                <Quote size={40} className="text-[#F97316] mb-4 opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
                 <p className="text-gray-300 text-sm leading-relaxed mb-8 min-h-[100px]">
                   "{test.quote}"
                 </p>
@@ -60,7 +60,7 @@ const Testimonials = () => {
         </div>
         
         <div className="flex justify-center gap-2 mt-10">
-          <div className="w-2.5 h-2.5 rounded-full bg-[#10B981]"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-[#F97316]"></div>
           <div className="w-2.5 h-2.5 rounded-full bg-slate-600 cursor-pointer hover:bg-slate-400 transition-colors"></div>
           <div className="w-2.5 h-2.5 rounded-full bg-slate-600 cursor-pointer hover:bg-slate-400 transition-colors"></div>
           <div className="w-2.5 h-2.5 rounded-full bg-slate-600 cursor-pointer hover:bg-slate-400 transition-colors"></div>

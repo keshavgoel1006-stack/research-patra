@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import LogoSlider from '../components/LogoSlider';
 import Services from '../components/Services';
 import Process from '../components/Process';
-import Testimonials from '../components/Testimonials';
+import Methodology from '../components/Methodology';
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <LogoSlider />
       <Services />
       <Process />
-      <Testimonials />
+      <Methodology/>
     </>
   );
 };

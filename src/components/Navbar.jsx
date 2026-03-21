@@ -8,7 +8,7 @@ const Navbar = () => {
   const location = useLocation();
 
   // Helper to color the active link green
-  const isActive = (path) => location.pathname === path ? "text-[#10B981]" : "text-gray-500 hover:text-[#10B981]";
+  const isActive = (path) => location.pathname === path ? "text-[#F97316]" : "text-gray-500 hover:text-[#F97316]";
 
   // Helper to close the menu when a user clicks a link on their phone
   const closeMenu = () => setIsOpen(false);
@@ -51,7 +51,7 @@ const Navbar = () => {
           <Link to="/services" className={`block text-lg font-bold ${isActive('/services')}`} onClick={closeMenu}>Services</Link>
           <Link to="/about" className={`block text-lg font-bold ${isActive('/about')}`} onClick={closeMenu}>About</Link>
           
-          <Link to="/contact" className="inline-block mt-4 px-6 py-3 rounded-full bg-[#10B981] text-white font-bold text-lg shadow-lg hover:bg-[#059669] transition-all w-full" onClick={closeMenu}>
+          <Link to="/contact" className="inline-block mt-4 px-6 py-3 rounded-full bg-[#F97316] text-white font-bold text-lg shadow-lg hover:bg-[#EA580C] transition-all w-full" onClick={closeMenu}>
             Get a Free Quote
           </Link>
         </div>

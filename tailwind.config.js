@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        // The vibrant Emerald Green from the buttons/highlights
-        primaryGreen: '#10B981', 
+        // The vibrant orange Green from the buttons/highlights
+        primaryGreen: '#F97316', 
         // A slightly darker green for hover states (makes buttons feel tactile)
-        primaryGreenDark: '#059669',
+        primaryGreenDark: '#EA580C',
         // The Deep, almost black Navy for text
         darkNavy: '#0F172A',     
         // PURE WHITE background for that clean, defined look

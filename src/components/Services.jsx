@@ -41,7 +41,7 @@ const Services = () => {
               className="bg-white p-8 rounded-[1.5rem] border border-gray-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-black hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
             >
               
-              <div className="w-14 h-14 rounded-2xl bg-[#10B981] flex items-center justify-center mb-6 shadow-sm">
+              <div className="w-14 h-14 rounded-2xl bg-[#F97316] flex items-center justify-center mb-6 shadow-sm">
                 {item.icon}
               </div>
               

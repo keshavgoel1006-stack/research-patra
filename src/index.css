@@ -18,23 +18,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom Scrollbar - Matching the new pure white theme */
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  /* CHANGED to white */
-  background: #FFFFFF;
-}
-::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
-  border-radius: 5px;
-  border: 2px solid #FFFFFF; /* Adds a white border around thumb for clean look */
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
-}
-/* Custom Emerald Scrollbar */
+/* Custom Orange Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -42,12 +26,12 @@ body {
   background: #F8FAFC; 
 }
 ::-webkit-scrollbar-thumb {
-  background: #10B981; 
+  background: #F97316; /* Updated to Orange */
   border-radius: 10px;
-  border: 3px solid #F8FAFC; /* Gives it a floating pill look */
+  border: 3px solid #F8FAFC; 
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #059669; 
+  background: #EA580C; /* Updated to Dark Orange */
 }
 
 /* Smooth Scrolling & Selection */
@@ -55,11 +39,6 @@ html {
   scroll-behavior: smooth;
 }
 ::selection {
-  background-color: #10B981;
+  background-color: #F97316; /* Highlight text is now orange */
   color: white;
-}
-
-/* Premium Card Hover Glow */
-.premium-glow:hover {
-  box-shadow: 0 20px 40px -5px rgba(16, 185, 129, 0.15), 0 10px 20px -5px rgba(16, 185, 129, 0.1);
 }
