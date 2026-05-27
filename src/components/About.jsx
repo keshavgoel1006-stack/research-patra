@@ -1,69 +1,56 @@
 import React from 'react';
-import { Target, Lightbulb } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-bgDark relative overflow-hidden">
-      {/* Glow Effect */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] -translate-y-1/2"></div>
-
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+    <section id="about" className="py-12 md:py-16 px-6 bg-white">
+      <div className="max-w-6xl mx-auto">
         
-        {/* Left: Text */}
-        <div>
-          <span className="text-teal-400 font-semibold tracking-wider uppercase text-sm">About Research Patra</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">
-            Making Research Smarter, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">
-              Faster & Meaningful.
-            </span>
+        {/* Section Header Text - Tight Margins */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0F172A] mb-4 tracking-tight">
+            Bringing Your Academic Goals to Life
           </h2>
-          <p className="text-gray-400 text-lg leading-relaxed mb-6">
-            We aim to bridge the gap between knowledge and execution. Whether you are a student crafting a dissertation or a professional working on technical reports, we turn confusion into clarity.
+          <p className="text-gray-600 max-w-3xl mx-auto text-base md:text-lg leading-relaxed font-medium">
+            With years of expertise in academic writing and research assistance, Research Patra helps students create impactful dissertations, theses, research papers, and literature reviews. Our dedicated team of writers and analysts works closely with you to deliver personalized, plagiarism-free, and high-quality work tailored to your academic needs.
           </p>
+        </div>
+
+        {/* 4-Column Grid System: Dynamically drops to 2 or 1 column depending on screen layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <div className="space-y-6">
-            <div className="flex gap-4">
-              <div className="mt-1 bg-blue-500/20 p-2 rounded-lg text-blue-400 h-fit"><Target size={24} /></div>
-              <div>
-                <h4 className="text-white font-bold text-lg">Our Mission</h4>
-                <p className="text-gray-400 text-sm">To make complex research accessible to everyone through personalized guidance and expert support.</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="mt-1 bg-teal-500/20 p-2 rounded-lg text-teal-400 h-fit"><Lightbulb size={24} /></div>
-              <div>
-                <h4 className="text-white font-bold text-lg">Our Vision</h4>
-                <p className="text-gray-400 text-sm">To become the most trusted global platform for research excellence and academic integrity.</p>
-              </div>
-            </div>
+          {/* Pillar 1 */}
+          <div className="p-6 bg-gray-50 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:border-orange-100 transition duration-300">
+            <h3 className="font-bold text-[#F97316] text-xl mb-2 tracking-tight">Affordable Prices</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              High-quality academic writing and research support at student-friendly, transparent rates.
+            </p>
           </div>
-        </div>
 
-        {/* Right: Image/Graphic */}
-        <div className="relative">
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl relative z-10">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-teal-500 flex items-center justify-center text-white font-bold">RP</div>
-              <div>
-                <div className="text-white font-bold">Research Patra Team</div>
-                <div className="text-xs text-green-400">● Online now</div>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="bg-white/5 p-4 rounded-xl rounded-tl-none text-sm text-gray-300">
-                "We don't just write; we partner with you to ensure your success."
-              </div>
-              <div className="bg-blue-600/20 p-4 rounded-xl rounded-tr-none text-sm text-blue-200 ml-auto w-fit">
-                Start your journey with us today.
-              </div>
-            </div>
+          {/* Pillar 2 */}
+          <div className="p-6 bg-gray-50 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:border-orange-100 transition duration-300">
+            <h3 className="font-bold text-[#F97316] text-xl mb-2 tracking-tight">Expert Team</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Experienced academic writers and researchers dedicated to crafting exceptional dissertations, theses, and research papers.
+            </p>
           </div>
-          {/* Decorative Elements */}
-          <div className="absolute -top-10 -right-10 w-32 h-32 bg-teal-500/20 rounded-full blur-2xl"></div>
-          <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl"></div>
-        </div>
 
+          {/* Pillar 3 */}
+          <div className="p-6 bg-gray-50 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:border-orange-100 transition duration-300">
+            <h3 className="font-bold text-[#F97316] text-xl mb-2 tracking-tight">Proven Academic Practices</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Ethical solutions that enhance learning and protect academic credibility.
+            </p>
+          </div>
+
+          {/* Pillar 4 */}
+          <div className="p-6 bg-gray-50 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:border-orange-100 transition duration-300">
+            <h3 className="font-bold text-[#F97316] text-xl mb-2 tracking-tight">Customer Focus</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Prioritizing student & researchers success with personalized academic support and one-to-one guidance.
+            </p>
+          </div>
+
+        </div>
       </div>
     </section>
   );

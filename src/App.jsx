@@ -1,4 +1,5 @@
 import React from 'react';
+import Chatbot from './Chatbot'; // <-- Add this line
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Layout Components
@@ -9,19 +10,19 @@ import ScrollToTop from './components/ScrollToTop'; // <-- 1. Imported here
 // Pages
 import Home from './pages/Home';
 import ServicesPage from './pages/ServicesPage';
-import About from './pages/About'; 
+import About from './pages/About';
 
 function App() {
   return (
     <Router>
       {/* 2. Placed here. It watches every route change! */}
-      <ScrollToTop /> 
-      
+      <ScrollToTop />
+
       <div className="min-h-screen bg-white font-sans text-[#0F172A] flex flex-col">
         <Navbar />
-        
+
         {/* Main Content Area */}
-        <main className="flex-grow pt-20"> 
+        <main className="flex-grow pt-20">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<ServicesPage />} />
@@ -30,6 +31,10 @@ function App() {
         </main>
 
         <Footer />
+        
+        {/* Floating Chatbot added safely inside the main wrapper! */}
+        <Chatbot />
+        
       </div>
     </Router>
   );

@@ -4,26 +4,26 @@ import { Search, PenTool, FileSearch, Award } from 'lucide-react';
 const steps = [
   {
     num: "01",
-    title: "Expertise & Experience",
-    desc: "With years of academic writing and research support, our team brings in-depth subject knowledge and proven expertise to every project.",
+    title: "Affordable Prices",
+    desc: "High-quality academic writing and research support at student-friendly, transparent, our team brings in-depth subject knowledge and proven expertise to every project.",
     icon: <Search className="text-[#F97316]" size={28} />
   },
   {
     num: "02",
-    title: "Customized Solutions",
-    desc: "Every dissertation, thesis, and paper is tailored to your specific requirements, ensuring originality and alignment with your academic goals.",
+    title: "Expert Team",
+    desc: "Experienced academic writers and researchers dedicated to crafting exceptional dissertations, theses, and research papers.",
     icon: <PenTool className="text-[#F97316]" size={28} />
   },
   {
     num: "03",
-    title: "Academic Integrity",
-    desc: "We uphold the highest standards of academic ethics with plagiarism-free work, reliable sources, and transparent processes.",
+    title: "Proven Academic Practices",
+    desc: "Ethical solutions that enhance learning and protect academic credibility",
     icon: <FileSearch className="text-[#F97316]" size={28} />
   },
   {
     num: "04",
-    title: "Statistical Data Analysis",
-    desc: "Turn raw data into clear, reliable insights with expert analysis.",
+    title: "Client Focus",
+    desc: "Prioritizing student & researchers success with personalized academic support and one-to-one guidance.",
     icon: <Award className="text-[#F97316]" size={28} />
   }
 ];
