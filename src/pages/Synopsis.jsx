@@ -1,4 +1,5 @@
 import React from 'react';
+import RejectionSection from '../components/RejectionSection';
 import { FileSignature, CheckCircle, BookOpen, PenTool, LayoutList, Target } from 'lucide-react';
 
 const Synopsis = () => {
@@ -19,38 +20,7 @@ const Synopsis = () => {
       </section>
 
       {/* 2. THE PROBLEM/SOLUTION SPLIT: Different from Topic Selection's side-by-side */}
-      <section className="py-16 md:py-24 max-w-7xl mx-auto px-6">
-        <div className="bg-slate-50 rounded-[3rem] p-8 md:p-16 border border-gray-100 shadow-sm">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-extrabold text-[#0F172A] mb-6 leading-tight">
-                Why Do Most Research Proposals Get Rejected?
-              </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                A research proposal isn't just an essay; it is a rigid academic blueprint. University committees reject proposals that lack a clear problem statement, feature outdated literature, or propose an unrealistic methodology.
-              </p>
-              <p className="text-gray-600 leading-relaxed font-semibold">
-                At Research Patra, we map your synopsis exactly to your university's guidelines, ensuring every technical requirement is met flawlessly.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
-                <div className="w-10 h-10 bg-red-50 text-red-500 flex items-center justify-center rounded-full font-bold">X</div>
-                <span className="text-gray-700 font-medium">Vague Research Objectives</span>
-              </div>
-              <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
-                <div className="w-10 h-10 bg-red-50 text-red-500 flex items-center justify-center rounded-full font-bold">X</div>
-                <span className="text-gray-700 font-medium">Flawed Research Methodology</span>
-              </div>
-              <div className="flex items-center gap-4 bg-[#F97316] p-4 rounded-2xl shadow-md transform translate-x-4">
-                <CheckCircle className="text-white shrink-0" />
-                <span className="text-white font-bold">Research Patra: 100% Committee Approval Rate</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <RejectionSection />
       {/* 3. VERTICAL TIMELINE: What we include in the Synopsis (Completely new layout) */}
       <section className="py-16 max-w-5xl mx-auto px-6">
         <div className="text-center mb-16">

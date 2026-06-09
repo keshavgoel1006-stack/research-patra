@@ -63,7 +63,7 @@ const ServicesPage = () => {
     <div className="bg-white font-sans selection:bg-[#F97316] selection:text-white overflow-x-hidden">
       
       {/* HEADER */}
-      <section className="relative pt-4 pb-12 md:pt-4 md:pb-16 overflow-hidden">
+      <section className="relative pt-4 pb-24 md:pt-8 md:pb-32 overflow-hidden">
         <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#EA580C] rounded-full blur-[140px] opacity-20 pointer-events-none"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#F97316] rounded-full blur-[150px] opacity-15 translate-x-1/4 pointer-events-none"></div>
 
@@ -79,7 +79,7 @@ const ServicesPage = () => {
       </section>
 
       {/* SERVICES GRID */}
-      <section className="pb-16 md:pb-24 relative overflow-hidden">
+     <section className="pt-16 md:pt-24 pb-16 md:pb-24 relative overflow-hidden" style={{ backgroundImage: 'radial-gradient(#CBD5E1 1.5px, transparent 1.5px)', backgroundSize: '30px 30px' }}>
         <div className="absolute inset-0 opacity-[0.4] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#CBD5E1 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }}></div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">

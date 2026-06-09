@@ -41,4 +41,10 @@ html {
 ::selection {
   background-color: #F97316; /* Highlight text is now orange */
   color: white;
+}/* GLOBAL MOBILE GAP FIX */
+@media (max-width: 768px) {
+  section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
 }

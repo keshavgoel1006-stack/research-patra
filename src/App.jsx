@@ -1,11 +1,12 @@
 import React from 'react';
-import Chatbot from './Chatbot'; 
+import Chatbot from './Chatbot';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Layout Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+// Notice the added '/publications/' in the path
 
 // Pages
 import Home from './pages/Home';
@@ -26,7 +27,8 @@ function App() {
     <Router>
       <ScrollToTop />
       
-      <div className="min-h-screen bg-white font-sans text-[#0F172A] flex flex-col">
+      {/* GLOBAL OVERFLOW LOCK APPLIED HERE: Added w-full and overflow-x-hidden */}
+      <div className="min-h-screen w-full overflow-x-hidden bg-white font-sans text-[#0F172A] flex flex-col">
         <Navbar />
         
         {/* Main Content Area - Notice pt-20 is removed here to fix the white gap! */}
@@ -44,6 +46,7 @@ function App() {
             <Route path="/systematic-review" element={<SystematicReview />} />
             <Route path="/statistical-analysis" element={<StatisticalAnalysis />} />
             <Route path="/editing-proofreading" element={<EditingProofreading />} />
+            
           </Routes>
         </main>
         
