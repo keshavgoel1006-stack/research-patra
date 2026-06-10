@@ -6,7 +6,7 @@ import {
 
 const TopicSelection = () => {
   return (
-    <div className="bg-white min-h-screen pt-20 font-sans selection:bg-[#F97316] selection:text-white overflow-x-hidden">
+   <div className="bg-white min-h-screen font-sans selection:bg-[#f97316] ...">
       
       {/* 1. HERO SECTION (Maps to their top header) */}
       <section className="relative py-16 md:py-24 bg-[#0F172A] overflow-hidden text-center">

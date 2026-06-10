@@ -3,10 +3,9 @@ import { ShieldCheck, Award, Zap, Lightbulb, HeartHandshake, CheckCircle2 } from
 
 const About = () => {
   return (
-    <div className="bg-white min-h-screen pt-20 font-sans selection:bg-[#F97316] selection:text-white">
-
+<div className="bg-white min-h-screen font-sans selection:bg-[#f97316] selection:text-white">
       {/* --- HERO SECTION --- */}
-      <section className="relative py-24 lg:py-32 overflow-hidden border-b border-gray-100">
+     <section className="relative pt-8 pb-24 lg:py-32 overflow-hidden border-b border-gray-100">
         <div className="absolute inset-0 opacity-[0.4] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#CBD5E1 1.5px, transparent 1.5px)', backgroundSize: '30px 30px' }}></div>
         <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#EA580C] rounded-full blur-[140px] opacity-10 pointer-events-none"></div>
         
