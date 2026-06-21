@@ -1,10 +1,14 @@
 import React from 'react';
-import { BookOpen, FileText, Search, BarChart2, Lightbulb, PenTool, CheckCircle2, ArrowRight, Target, Globe, Award, FileSignature } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { BookOpen, FileText, Search, BarChart2, PenTool, CheckCircle2, ArrowRight, Target, Globe, Award, FileSignature } from 'lucide-react';
+import { useContactForm } from '../context/ContactFormContext';
+import PageMeta from '../components/PageMeta';
+import { HUB_PAGES } from '../data/servicePages';
 
 const fullServices = [
   {
     title: "Topic Selection",
-    desc: "Struggling to find a unique research gap? Our experts help you brainstorm and finalize compelling, novel research topics that guarantee approval from your university committee.",
+    desc: "Struggling to find a unique research gap? Our experts help you brainstorm and finalize compelling research topics aligned with your university requirements.",
     icon: <Target size={28} className="text-white" />,
     link: "/topic-selection"
   },
@@ -16,13 +20,13 @@ const fullServices = [
   },
   {
     title: "Thesis & Dissertation Writing",
-    desc: "From drafting chapters to refining arguments and ensuring academic formatting, our end-to-end dissertation writing support ensures you submit a flawless, highly credible document.",
+    desc: "From drafting chapters to refining arguments and ensuring academic formatting, our end-to-end dissertation writing support helps you submit a credible, well-structured document.",
     icon: <BookOpen size={28} className="text-white" />,
-    link: "#"
+    link: "/thesis-writing"
   },
   {
     title: "Research & Review Papers",
-    desc: "Get publish-ready academic papers tailored precisely to your subject, styling guide, and targeted international journal requirements (IEEE, Springer, Elsevier).",
+    desc: "Journal-ready academic papers tailored to your subject, styling guide, and target journal formatting requirements (IEEE, Springer, Elsevier).",
     icon: <FileText size={28} className="text-white" />,
     link: "/research-papers"
   },
@@ -40,27 +44,36 @@ const fullServices = [
   },
   {
     title: "Editing & Proofreading",
-    desc: "Even strong research loses impact if poorly formatted. We rigorously peer-review manuscripts for academic flow, grammatical precision, and citation validation (APA, MLA, Harvard).",
+    desc: "Even strong research loses impact if poorly formatted. We rigorously review manuscripts for academic flow, grammatical precision, and citation validation (APA, MLA, Harvard).",
     icon: <PenTool size={28} className="text-white" />,
     link: "/editing-proofreading"
   },
   {
-    title: "SCI & Scopus Publication",
-    desc: "Navigate the complex publication process with ease. We assist with journal selection, formatting, peer-review rebuttal responses, and guaranteed high-impact indexing.",
+    title: "Scopus Manuscript Support",
+    desc: "Manuscript writing and formatting aligned to Scopus journal guidelines for your target journal.",
     icon: <Globe size={28} className="text-white" />,
-    link: "#"
+    link: "/scopus-publication"
+  },
+  {
+    title: "SCI / WoS Manuscript Support",
+    desc: "Manuscript writing and formatting aligned to SCI and Web of Science journal guidelines.",
+    icon: <Globe size={28} className="text-white" />,
+    link: "/sci-journal-publication"
   },
   {
     title: "UGC Care & Conference Papers",
-    desc: "Secure fast and ethical publications in UGC Care listed journals and prestigious international academic conferences to meet your critical academic milestones.",
+    desc: "Conference paper writing and UGC Care journal manuscript formatting to meet your academic milestones and university requirements.",
     icon: <Award size={28} className="text-white" />,
-    link: "#"
+    link: "/ugc-publication"
   }
 ];
 
 const ServicesPage = () => {
+  const { openContactForm } = useContactForm();
+
   return (
     <div className="bg-white font-sans selection:bg-[#F97316] selection:text-white overflow-x-hidden">
+      <PageMeta title={HUB_PAGES.services.metaTitle} description={HUB_PAGES.services.metaDescription} path={HUB_PAGES.services.path} />
       
       {/* HEADER */}
       <section className="relative pt-4 pb-24 md:pt-8 md:pb-32 overflow-hidden">
@@ -102,12 +115,32 @@ const ServicesPage = () => {
                 </p>
 
                 {/* HERE IS THE CLICKABLE LINK */}
-                <a href={service.link} className="mt-6 md:mt-8 flex items-center gap-2 text-[#F97316] font-bold group-hover:text-[#EA580C] transition-colors cursor-pointer w-fit">
+                <Link to={service.link} className="mt-6 md:mt-8 flex items-center gap-2 text-[#F97316] font-bold group-hover:text-[#EA580C] transition-colors cursor-pointer w-fit">
                   Learn more <ArrowRight size={20} className="transform group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 max-w-5xl mx-auto px-6">
+        <h2 className="text-2xl font-extrabold text-[#0F172A] mb-8 text-center">Explore More</h2>
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { label: 'How We Work', to: '/how-we-work', desc: 'Our engagement process' },
+            { label: 'Research Areas', to: '/research-areas', desc: 'Disciplines we support' },
+            { label: 'Ethical Approach', to: '/ethical-approach', desc: 'Our academic ethics' },
+          ].map((hub) => (
+            <Link
+              key={hub.to}
+              to={hub.to}
+              className="p-5 rounded-2xl border border-gray-100 bg-slate-50 hover:border-[#F97316] transition-colors"
+            >
+              <h3 className="font-bold text-[#0F172A] mb-1">{hub.label}</h3>
+              <p className="text-sm text-gray-500">{hub.desc}</p>
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -117,10 +150,10 @@ const ServicesPage = () => {
           
           <div className="relative p-8 md:p-12 bg-white rounded-[2rem] md:rounded-[3rem] border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] text-center transform hover:scale-[1.02] transition-transform duration-500">
             <div className="absolute -top-10 -right-10 w-32 h-32 md:w-40 md:h-40 bg-[#F97316] rounded-full blur-[60px] opacity-20 pointer-events-none"></div>
-            <h3 className="text-6xl md:text-8xl font-black text-[#0F172A] mb-2 tracking-tighter">10<span className="text-[#F97316]">+</span></h3>
-            <p className="text-lg md:text-xl font-bold text-gray-500 uppercase tracking-widest">Years of Trust</p>
+            <h3 className="text-6xl md:text-8xl font-black text-[#0F172A] mb-2 tracking-tighter">100<span className="text-[#F97316]">+</span></h3>
+            <p className="text-lg md:text-xl font-bold text-gray-500 uppercase tracking-widest">Combined Expert Years</p>
             <div className="w-16 md:w-20 h-1.5 bg-[#F97316] mx-auto mt-6 md:mt-8 rounded-full"></div>
-            <p className="mt-6 md:mt-8 text-gray-500 font-medium text-sm md:text-base">Delivering academic excellence across undergraduate, postgraduate, and doctoral programs.</p>
+            <p className="mt-6 md:mt-8 text-gray-500 font-medium text-sm md:text-base">The total years of academic experience across our team of writers and researchers, added together.</p>
           </div>
 
           <div>
@@ -131,7 +164,7 @@ const ServicesPage = () => {
               A Foundation of <br className="hidden sm:block" /> Academic Integrity
             </h2>
             <p className="text-gray-500 text-base md:text-lg mb-6 md:mb-8 leading-relaxed font-medium">
-              We believe academic success should not feel overwhelming — that's why we combine expertise with personalized guidance, ensuring every project is handled with care.
+              We believe academic success should not feel overwhelming. That is why we combine expertise with personalized guidance, ensuring every project is handled with care.
             </p>
             <ul className="space-y-4 md:space-y-5">
               <li className="flex items-center gap-3 md:gap-4 text-[#0F172A] font-bold text-base md:text-lg">
@@ -151,21 +184,17 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* CTA BANNER */}
-      <section className="relative py-16 md:py-24 bg-[#0F172A] overflow-hidden text-center">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] bg-[#F97316] rounded-full blur-[150px] opacity-20 pointer-events-none"></div>
-        
-        <div className="relative z-10 max-w-3xl mx-auto px-4 md:px-6">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 md:mb-6 tracking-tight leading-tight">
-            Ready to Achieve Your <br className="hidden sm:block" /> Academic Goals?
-          </h2>
-          <p className="text-gray-400 text-base md:text-lg mb-8 md:mb-10 font-medium px-2">
-            Contact us today to discuss your project, get a free quote, or learn more about how we can support your research journey.
-          </p>
-          <button className="w-full sm:w-auto px-8 md:px-10 py-3.5 md:py-4 bg-[#F97316] text-white rounded-full font-bold text-base md:text-lg shadow-[0_8px_20px_rgb(249,115,22,0.35)] hover:bg-[#EA580C] transition-colors">
-            Get A Free Quote
+      <section className="py-12 px-6 bg-gray-50 border-t border-gray-100 text-center">
+        <p className="text-gray-500 max-w-xl mx-auto">
+          Not sure which service fits your project?{' '}
+          <button
+            type="button"
+            onClick={() => openContactForm({ message: 'I would like guidance on which service fits my project.', source: 'services' })}
+            className="text-[#F97316] font-bold hover:underline"
+          >
+            Send us a message
           </button>
-        </div>
+        </p>
       </section>
 
     </div>

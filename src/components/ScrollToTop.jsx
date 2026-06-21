@@ -2,15 +2,18 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const ScrollToTop = () => {
-  // This grabs the current URL path
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
-  // Every time the pathname changes, this runs and scrolls the window to X:0, Y:0
   useEffect(() => {
+    if (hash === '#contact') {
+      const timer = setTimeout(() => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+      return () => clearTimeout(timer);
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash]);
 
-  // It returns null because it doesn't actually draw anything on the screen
   return null;
 };
 

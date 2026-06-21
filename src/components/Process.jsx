@@ -51,7 +51,7 @@ const Process = () => {
             How We Achieve <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] to-[#EA580C]">Excellence</span>
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto font-medium">
-            A proven, four-step methodology designed to take you from a blank page to a published scholar with zero stress.
+            A proven, four-step methodology designed to take you from a blank page to a polished, submission-ready document with zero stress.
           </p>
         </div>
 

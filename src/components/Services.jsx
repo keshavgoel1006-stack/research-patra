@@ -1,36 +1,80 @@
 import React from 'react';
-import { BookOpen, FileText, Search, BarChart3, GraduationCap, FileCheck } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import {
+  GraduationCap,
+  FileText,
+  Search,
+  BarChart3,
+  Target,
+  FileSignature,
+  PenTool,
+  Globe,
+  Award,
+  ArrowRight,
+} from 'lucide-react';
+
+const serviceList = [
+  {
+    icon: Target,
+    title: 'Topic Selection',
+    description: 'Identify research gaps and finalize compelling topics aligned with your university and field requirements.',
+    link: '/topic-selection',
+  },
+  {
+    icon: FileSignature,
+    title: 'Research Proposal & Synopsis',
+    description: 'Structured proposals with clear problem statements, objectives, methodology, and literature review.',
+    link: '/synopsis',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Thesis & Dissertation Writing',
+    description: 'Chapter-by-chapter thesis support from introduction through discussion, formatted to your university guidelines.',
+    link: '/thesis-writing',
+  },
+  {
+    icon: FileText,
+    title: 'Research & Review Papers',
+    description: 'Journal-ready academic papers tailored to your subject, styling guide, and target journal requirements.',
+    link: '/research-papers',
+  },
+  {
+    icon: Search,
+    title: 'Systematic Literature Review',
+    description: 'Thorough, organized reviews with critical mapping of existing studies and research gaps.',
+    link: '/systematic-review',
+  },
+  {
+    icon: BarChart3,
+    title: 'Statistical Data Analysis',
+    description: 'Expert analysis with SPSS, AMOS, R, Python, and MATLAB. Hypothesis testing, regression, and charts.',
+    link: '/statistical-analysis',
+  },
+  {
+    icon: PenTool,
+    title: 'Editing & Proofreading',
+    description: 'Rigorous review for academic flow, grammar, citation accuracy, and formatting (APA, MLA, Harvard).',
+    link: '/editing-proofreading',
+  },
+  {
+    icon: Globe,
+    title: 'Scopus & SCI Manuscript Support',
+    description: 'Manuscript writing and formatting aligned to Scopus and SCI journal guidelines for your target journal.',
+    link: '/scopus-publication',
+  },
+  {
+    icon: Award,
+    title: 'UGC Care & Conference Papers',
+    description: 'Conference paper writing and UGC Care journal manuscript formatting for your academic milestones.',
+    link: '/ugc-publication',
+  },
+];
 
 const Services = () => {
-  const serviceList = [
-    {
-      icon: <GraduationCap className="h-6 w-6 text-[#F97316]" />,
-      title: "Dissertation Writing & Planning",
-      description: "Turn your research ideas into well-structured, high-quality dissertations with professional academic structuring and planning support."
-    },
-    {
-      icon: <FileText className="h-6 w-6 text-[#F97316]" />,
-      title: "Research Paper Writing",
-      description: "Get publish-ready academic papers tailored precisely to your subject, styling guide, and targeted international journal requirements."
-    },
-    {
-      icon: <Search className="h-6 w-6 text-[#F97316]" />,
-      title: "Systematic Literature Review",
-      description: "Enhance your research paper depth with a thorough, highly organized review of existing studies and critical mapping of gaps."
-    },
-    {
-      icon: <BarChart3 className="h-6 w-6 text-[#F97316]" />,
-      title: "Statistical Data Analysis",
-      description: "Turn complex raw datasets into clear, reliable scientific insights with expert statistical analysis and visual graphical plotting."
-    }
-  ];
-
   return (
-    <section id="services" className="bg-gray-50 py-12 md:py-16 px-6">
+    <section id="services" className="bg-gray-50 py-12 md:py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        
-        {/* Section Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 md:mb-14">
           <span className="text-[#F97316] text-xs font-bold uppercase tracking-widest bg-orange-50 px-3 py-1.5 rounded-full inline-block mb-3">
             What We Offer
           </span>
@@ -38,32 +82,44 @@ const Services = () => {
             Comprehensive Academic Writing & Research Solutions
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-base leading-relaxed">
-            Ethical guidance designed to help scholars design, write, edit, and publish world-class scientific papers.
+            From your first research idea to a polished, submission-ready manuscript. Every stage of your academic journey, covered by subject-matter experts.
           </p>
         </div>
 
-        {/* Dense Grid - Max 2 cols on tablet/desktop to keep visual hierarchy tight and legible */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {serviceList.map((service, index) => (
-            <div 
-              key={index} 
-              className="bg-white p-6 md:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-orange-100 transition duration-300 flex items-start gap-4 md:gap-5"
-            >
-              <div className="p-3 bg-orange-50 rounded-xl shrink-0">
-                {service.icon}
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-lg md:text-xl font-bold text-gray-950 tracking-tight">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+          {serviceList.map((service) => {
+            const Icon = service.icon;
+            return (
+              <Link
+                key={service.link}
+                to={service.link}
+                className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-orange-200 transition duration-300 flex flex-col gap-4 group h-full"
+              >
+                <div className="p-3 bg-orange-50 rounded-xl w-fit group-hover:bg-orange-100 transition-colors">
+                  <Icon className="h-6 w-6 text-[#F97316]" />
+                </div>
+                <div className="space-y-2 flex-grow">
+                  <h3 className="text-lg font-bold text-gray-950 tracking-tight group-hover:text-[#F97316] transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                </div>
+                <span className="inline-flex items-center gap-1 text-[#F97316] font-bold text-sm group-hover:gap-2 transition-all">
+                  Explore <ArrowRight size={16} />
+                </span>
+              </Link>
+            );
+          })}
         </div>
 
+        <div className="text-center mt-10">
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 text-[#0F172A] font-bold text-sm hover:text-[#F97316] transition-colors"
+          >
+            View full services overview <ArrowRight size={16} />
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -74,7 +74,7 @@ const RejectionSection = () => {
               <div className="text-white">
                 <CheckCircle size={24} strokeWidth={2.5} />
               </div>
-              <span className="font-bold text-white text-lg">Research Patra: 100% Committee Approval Rate</span>
+              <span className="font-bold text-white text-lg">Research Patra: Structured to meet university committee guidelines</span>
             </motion.div>
           </motion.div>
 
