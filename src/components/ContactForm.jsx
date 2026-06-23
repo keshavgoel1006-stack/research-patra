@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Send, CheckCircle2 } from 'lucide-react';
-import { mockSubmit } from '../utils/mockSubmit';
+import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { submitContactForm } from '../utils/submitContactForm';
 
 const emptyFields = { name: '', email: '', phone: '', message: '' };
 
@@ -8,6 +8,7 @@ const ContactForm = ({ source = 'website', initialMessage = '', variant = 'foote
   const [fields, setFields] = useState(emptyFields);
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     if (initialMessage) {
@@ -16,36 +17,51 @@ const ContactForm = ({ source = 'website', initialMessage = '', variant = 'foote
   }, [initialMessage]);
 
   const handleChange = (e) => {
+    setError('');
     setFields((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-    const result = await mockSubmit({ ...fields, source });
+    setError('');
+    const result = await submitContactForm({ ...fields, source });
     setSubmitting(false);
     if (result.success) {
       setSuccess(true);
       setFields(emptyFields);
       onSuccess?.();
+    } else {
+      setError(result.error || 'Something went wrong. Please try again.');
     }
   };
 
+  const isFooter = variant === 'footer';
+
   if (success) {
     return (
-      <div className={`text-center py-8 ${variant === 'footer' ? 'bg-slate-800/50 rounded-2xl border border-slate-700' : ''}`}>
+      <div
+        className={`text-center py-8 ${
+          isFooter ? 'bg-slate-800/50 rounded-2xl border border-slate-700' : ''
+        }`}
+      >
         <CheckCircle2 size={48} className="text-[#F97316] mx-auto mb-4" />
-        <p className="text-lg font-bold text-white">Thank you! We'll get back to you soon.</p>
-        <p className="text-gray-400 text-sm mt-2">We usually reply within a few hours.</p>
+        <p className={`text-lg font-bold ${isFooter ? 'text-white' : 'text-[#0F172A]'}`}>
+          Thank you! We'll get back to you soon.
+        </p>
+        <p className={`text-sm mt-2 ${isFooter ? 'text-gray-400' : 'text-gray-500'}`}>
+          We usually reply within a few hours.
+        </p>
       </div>
     );
   }
 
-  const isFooter = variant === 'footer';
   const inputClass = isFooter
     ? 'w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-gray-500 focus:outline-none focus:border-[#F97316] focus:ring-1 focus:ring-[#F97316] transition-all text-sm'
     : 'w-full px-4 py-3 rounded-xl border border-gray-200 text-[#0F172A] placeholder-gray-400 focus:outline-none focus:border-[#F97316] focus:ring-2 focus:ring-orange-100 transition-all text-sm';
-  const labelClass = isFooter ? 'text-sm font-semibold text-gray-300 mb-1.5 block' : 'text-sm font-semibold text-gray-700 mb-1.5 block';
+  const labelClass = isFooter
+    ? 'text-sm font-semibold text-gray-300 mb-1.5 block'
+    : 'text-sm font-semibold text-gray-700 mb-1.5 block';
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -93,7 +109,7 @@ const ContactForm = ({ source = 'website', initialMessage = '', variant = 'foote
       <div>
         <label htmlFor={`${variant}-message`} className={labelClass}>Message</label>
         <textarea
-          id="contact-message"
+          id={`${variant}-message`}
           name="message"
           required
           rows={3}
@@ -103,6 +119,17 @@ const ContactForm = ({ source = 'website', initialMessage = '', variant = 'foote
           className={`${inputClass} resize-none`}
         />
       </div>
+      {error && (
+        <div
+          className={`flex items-start gap-2 text-sm rounded-xl px-4 py-3 ${
+            isFooter ? 'bg-red-950/40 text-red-200 border border-red-900' : 'bg-red-50 text-red-700 border border-red-100'
+          }`}
+          role="alert"
+        >
+          <AlertCircle size={18} className="shrink-0 mt-0.5" />
+          <span>{error}</span>
+        </div>
+      )}
       <button
         type="submit"
         disabled={submitting}
