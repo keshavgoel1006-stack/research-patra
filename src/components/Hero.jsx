@@ -6,7 +6,7 @@ import { useContactForm } from '../context/ContactFormContext';
 const stats = [
   { value: '100+', label: 'Theses Delivered' },
   { value: '150+', label: 'Combined Expert Years' },
-  { value: '0%', label: 'Plagiarism Tolerance' },
+  { value: '100%', label: 'Plagiarism-Free Delivery' },
   { value: '24*7', label: 'Scholar Support' },
 ];
 

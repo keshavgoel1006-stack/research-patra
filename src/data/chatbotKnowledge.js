@@ -17,7 +17,7 @@ export const FAQ_VISIBLE_COUNT = 3;
 export const KNOWLEDGE_BASE = [
   {
     keywords: ['services', 'offer', 'what do you do', 'help with'],
-    answer: 'We offer topic selection, research proposals, thesis and dissertation writing, research papers, systematic literature reviews, statistical data analysis (SPSS, R, Python), editing and proofreading, and manuscript formatting for Scopus, SCI, and UGC Care journal guidelines.',
+    answer: 'We offer topic selection, research proposals, thesis and dissertation writing, research papers, systematic literature reviews, statistical data analysis (SPSS, R, Python), bibliometric analysis (VOSviewer, Biblioshiny), patent support, editing and proofreading, and manuscript formatting for Scopus, SCI, and UGC Care journal guidelines.',
   },
   {
     keywords: ['thesis', 'dissertation', 'phd', 'doctoral'],
@@ -53,7 +53,7 @@ export const KNOWLEDGE_BASE = [
   },
   {
     keywords: ['plagiarism', 'original', 'ethical'],
-    answer: 'Every document we deliver is written from scratch and checked for plagiarism. We follow strict academic ethics and your university guidelines.',
+    answer: 'Every document we deliver is written from scratch with 100% plagiarism-free delivery and checked against academic standards. We follow strict academic ethics and your university guidelines.',
   },
   {
     keywords: ['started', 'begin', 'how to', 'get started'],

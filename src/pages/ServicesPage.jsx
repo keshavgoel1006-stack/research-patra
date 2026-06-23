@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, FileText, Search, BarChart2, PenTool, CheckCircle2, ArrowRight, Target, Globe, Award, FileSignature } from 'lucide-react';
+import { BookOpen, FileText, Search, BarChart2, PenTool, CheckCircle2, ArrowRight, Target, Globe, Award, FileSignature, LineChart, Lightbulb } from 'lucide-react';
 import { useContactForm } from '../context/ContactFormContext';
 import PageMeta from '../components/PageMeta';
 import { HUB_PAGES } from '../data/servicePages';
@@ -41,6 +41,18 @@ const fullServices = [
     desc: "Turn raw datasets into clear insights. Our experts use advanced statistical tools (SPSS, AMOS, R, Python, MATLAB) to test hypotheses and visualize your scientific findings.",
     icon: <BarChart2 size={28} className="text-white" />,
     link: "/statistical-analysis"
+  },
+  {
+    title: "Bibliometric Analysis",
+    desc: "Citation networks, keyword co-occurrence maps, and research trend reports using VOSviewer, Biblioshiny, and R for thesis and journal work.",
+    icon: <LineChart size={28} className="text-white" />,
+    link: "/bibliometric-analysis"
+  },
+  {
+    title: "Patent Support",
+    desc: "Prior art search, invention documentation, and technical write-ups to support patent filing preparation across engineering and technology fields.",
+    icon: <Lightbulb size={28} className="text-white" />,
+    link: "/patent-support"
   },
   {
     title: "Editing & Proofreading",

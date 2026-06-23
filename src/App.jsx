@@ -30,7 +30,8 @@ import HowWeWork from './pages/HowWeWork';
 import ResearchAreas from './pages/ResearchAreas';
 import EthicalApproach from './pages/EthicalApproach';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsAndConditions from './pages/TermsAndConditions';
+import BibliometricAnalysis from './pages/BibliometricAnalysis';
+import PatentSupport from './pages/PatentSupport';
 
 function AppLayout() {
   return (
@@ -47,6 +48,8 @@ function AppLayout() {
           <Route path="/research-papers" element={<ResearchPapers />} />
           <Route path="/systematic-review" element={<SystematicReview />} />
           <Route path="/statistical-analysis" element={<StatisticalAnalysis />} />
+          <Route path="/bibliometric-analysis" element={<BibliometricAnalysis />} />
+          <Route path="/patent-support" element={<PatentSupport />} />
           <Route path="/editing-proofreading" element={<EditingProofreading />} />
           <Route path="/scopus-publication" element={<ScopusPublication />} />
           <Route path="/sci-journal-publication" element={<SciJournal />} />

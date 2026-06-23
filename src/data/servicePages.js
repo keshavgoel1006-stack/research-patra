@@ -20,6 +20,8 @@ export const MEGA_MENU = [
     links: [
       { label: 'Systematic Literature Review', to: '/systematic-review', desc: 'PRISMA-aligned SLR support' },
       { label: 'Statistical Data Analysis', to: '/statistical-analysis', desc: 'SPSS, R, Python, MATLAB' },
+      { label: 'Bibliometric Analysis', to: '/bibliometric-analysis', desc: 'VOSviewer, Biblioshiny, citation mapping' },
+      { label: 'Patent Support', to: '/patent-support', desc: 'Patent drafting and documentation' },
     ],
   },
   {
@@ -671,6 +673,118 @@ export const SERVICE_PAGES = {
       message: 'I need help with UGC Care or conference paper writing.',
       source: 'ugc-publication',
       linkText: 'Discuss UGC or conference paper support',
+    },
+  },
+  'bibliometric-analysis': {
+    path: '/bibliometric-analysis',
+    id: 'bibliometric-analysis',
+    title: 'Bibliometric Analysis',
+    metaTitle: 'Bibliometric Analysis | Research Patra',
+    metaDescription:
+      'Bibliometric and scientometric analysis with VOSviewer, Biblioshiny, and R for citation mapping, co-authorship networks, and research trends.',
+    hero: {
+      badge: 'VOSviewer · Biblioshiny · R',
+      title: 'Bibliometric Analysis',
+      subtitle:
+        'Citation analysis, co-authorship networks, keyword co-occurrence maps, and research trend reports for thesis chapters and journal papers.',
+    },
+    process: [
+      { title: 'Scope & data export', text: 'We confirm your research question, databases (Scopus, WoS), and export search results.' },
+      { title: 'Data cleaning', text: 'Deduplication, author affiliation standardization, and metadata preparation.' },
+      { title: 'Analysis & visualization', text: 'Co-citation, bibliographic coupling, keyword maps, and trend analysis in VOSviewer or Biblioshiny.' },
+      { title: 'Interpretation & report', text: 'Charts, network maps, and a written interpretation for your thesis or manuscript.' },
+    ],
+    deliverables: [
+      'Cleaned bibliometric dataset',
+      'Network and density visualization maps',
+      'Trend and citation analysis tables',
+      'Written interpretation chapter or section',
+      'Tool output files (VOSviewer, Biblioshiny, R where used)',
+    ],
+    faqs: [
+      {
+        q: 'Which tools do you use for bibliometrics?',
+        a: 'VOSviewer, Biblioshiny, and R are our primary tools. The choice depends on your dataset size and analysis goals.',
+      },
+      {
+        q: 'Which databases can you work with?',
+        a: 'Scopus and Web of Science exports are most common. Share your database access and search string when you contact us.',
+      },
+      {
+        q: 'Is bibliometric analysis suitable for a thesis chapter?',
+        a: 'Yes. Many PhD and Masters students use bibliometric chapters for literature mapping, trend analysis, and gap identification.',
+      },
+      {
+        q: 'What do I need to provide?',
+        a: 'Your research focus, preferred databases, and any existing search exports or inclusion criteria you have already defined.',
+      },
+    ],
+    related: [
+      { label: 'Systematic Literature Review', to: '/systematic-review' },
+      { label: 'Statistical Data Analysis', to: '/statistical-analysis' },
+      { label: 'Research Papers', to: '/research-papers' },
+    ],
+    contact: {
+      serviceName: 'bibliometric analysis',
+      message: 'I need help with bibliometric analysis for my research.',
+      source: 'bibliometric-analysis',
+      linkText: 'Discuss bibliometric analysis',
+    },
+  },
+  'patent-support': {
+    path: '/patent-support',
+    id: 'patent-support',
+    title: 'Patent Support',
+    metaTitle: 'Patent Support & Documentation | Research Patra',
+    metaDescription:
+      'Patent search, prior art review, and technical documentation support for invention disclosure, claims drafting, and IP research.',
+    hero: {
+      badge: 'IP Research · Documentation',
+      title: 'Patent Support',
+      subtitle:
+        'Prior art search, invention documentation, claims structuring, and technical write-ups to support your patent filing preparation.',
+    },
+    process: [
+      { title: 'Invention briefing', text: 'You share your invention concept, technical field, and any existing notes or prototypes.' },
+      { title: 'Prior art search', text: 'We search patent and literature databases for relevant existing disclosures and citations.' },
+      { title: 'Documentation drafting', text: 'Technical description, claims outline, and supporting narrative prepared per your filing framework.' },
+      { title: 'Review & refinement', text: 'Revisions based on your feedback and alignment with your patent attorney or filing requirements.' },
+    ],
+    deliverables: [
+      'Prior art search summary with references',
+      'Technical invention description draft',
+      'Claims structure or outline (where agreed)',
+      'Supporting diagrams or figure descriptions (where agreed)',
+      'Revision support within agreed scope',
+    ],
+    faqs: [
+      {
+        q: 'Do you file patents on my behalf?',
+        a: 'We provide research, documentation, and drafting support. Formal filing is typically handled by you or your registered patent attorney.',
+      },
+      {
+        q: 'What types of inventions do you support?',
+        a: 'Engineering, software, mechanical, chemical, biotechnology, and other technical fields. Share your domain when you contact us.',
+      },
+      {
+        q: 'Can you help with prior art search only?',
+        a: 'Yes. Prior art search and landscape review can be scoped as a standalone engagement.',
+      },
+      {
+        q: 'What information should I share to start?',
+        a: 'A clear description of your invention, technical field, target markets or applications, and any existing drawings or lab notes.',
+      },
+    ],
+    related: [
+      { label: 'Research Papers', to: '/research-papers' },
+      { label: 'Bibliometric Analysis', to: '/bibliometric-analysis' },
+      { label: 'Topic Selection', to: '/topic-selection' },
+    ],
+    contact: {
+      serviceName: 'patent support',
+      message: 'I need help with patent documentation and prior art research.',
+      source: 'patent-support',
+      linkText: 'Discuss patent support',
     },
   },
 };

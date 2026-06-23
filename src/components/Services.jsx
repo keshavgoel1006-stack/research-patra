@@ -11,6 +11,8 @@ import {
   Globe,
   Award,
   ArrowRight,
+  LineChart,
+  Lightbulb,
 } from 'lucide-react';
 
 const serviceList = [
@@ -49,6 +51,18 @@ const serviceList = [
     title: 'Statistical Data Analysis',
     description: 'Expert analysis with SPSS, AMOS, R, Python, and MATLAB. Hypothesis testing, regression, and charts.',
     link: '/statistical-analysis',
+  },
+  {
+    icon: LineChart,
+    title: 'Bibliometric Analysis',
+    description: 'Citation mapping, co-authorship networks, and research trend analysis with VOSviewer and Biblioshiny.',
+    link: '/bibliometric-analysis',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Patent Support',
+    description: 'Prior art search, invention documentation, and technical write-ups for patent filing preparation.',
+    link: '/patent-support',
   },
   {
     icon: PenTool,
