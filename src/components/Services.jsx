@@ -13,6 +13,7 @@ import {
   ArrowRight,
   LineChart,
   Lightbulb,
+  Presentation,
 } from 'lucide-react';
 
 const serviceList = [
@@ -72,12 +73,18 @@ const serviceList = [
   },
   {
     icon: Globe,
-    title: 'Scopus & SCI Manuscript Support',
-    description: 'Manuscript writing and formatting aligned to Scopus and SCI journal guidelines for your target journal.',
+    title: 'Scopus Manuscript Support',
+    description: 'Manuscript writing and formatting aligned to Scopus journal guidelines for your target journal.',
     link: '/scopus-publication',
   },
   {
     icon: Award,
+    title: 'SCI / WoS Manuscript Support',
+    description: 'Manuscript writing and formatting aligned to SCI and Web of Science journal guidelines.',
+    link: '/sci-journal-publication',
+  },
+  {
+    icon: Presentation,
     title: 'UGC Care & Conference Papers',
     description: 'Conference paper writing and UGC Care journal manuscript formatting for your academic milestones.',
     link: '/ugc-publication',

@@ -30,6 +30,7 @@ import HowWeWork from './pages/HowWeWork';
 import ResearchAreas from './pages/ResearchAreas';
 import EthicalApproach from './pages/EthicalApproach';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
 import BibliometricAnalysis from './pages/BibliometricAnalysis';
 import PatentSupport from './pages/PatentSupport';
 
